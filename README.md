@@ -5,13 +5,7 @@
 - [Trading Strategy Rules](#trading-strategy-rules)
 - [Files](#files)
 - [Prerequisites](#prerequisites)
-- [How to Run](#how-to-run)
-- [Results](#results)
-- [Project Structure](#project-structure)
-- [Dependencies](#dependencies)
-- [Visibility](#visibility)
-- [Contributing](#contributing)
-- [License](#license)
+- [Dependencies](#Dependencies)
 - [Author](#author)
 
 ## Project Overview
@@ -77,12 +71,6 @@ To run this project, you’ll need:
 - A GitHub account (optional, for cloning the repository).
 - A CSV file with VIX and UVXY data (you can use the provided `Trade Data.csv` file).
 
-## Example output
-
-Trade Data (first 40 rows):
-    vix  uvxy  sell_amount  available_capital  units_traded  cumulative_units_traded  buy_back_amount  total_trading_capital  trade_counter      profit
-0  21.0  10.5      10000.0          808000.0    952.380952              952.380952              NaN              1010000.0            1.0    10000.0
-1  18.0  11.0          NaN          799523.8           NaN                     0.0        10476.19               999523.8            0.0     -476.2
 
 ## Dependencies
 The project uses the following Python libraries, which are pre-installed in Google Colab:
