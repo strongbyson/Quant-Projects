@@ -9,6 +9,7 @@
 - [Author](#author)
 
 ## Project Overview
+Achieved 24.59% annualized return.
 This project develops a trading strategy that uses the VIX index (a measure of market volatility) to trade UVXY, an exchange-traded fund that tracks VIX futures. The strategy is implemented in Python using the `pandas` library for data manipulation and runs in Google Colab for easy access and execution.
 
 The goal is to simulate trading decisions based on VIX thresholds, track the total trading capital, and calculate profits over time. The project includes a sample dataset (`Trade Data.csv`) with VIX and UVXY prices, but users can replace it with their own data.
