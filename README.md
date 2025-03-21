@@ -19,6 +19,13 @@ This project develops a trading strategy that uses the VIX index (a measure of m
 
 The goal is to simulate trading decisions based on VIX thresholds, track the total trading capital, and calculate profits over time. The project includes a sample dataset (`Trade Data.csv`) with VIX and UVXY prices, but users can replace it with their own data.
 
+## Note - Data manipulation of VIX and UVXY in MS Excel using INDEX function.
+This trading strategy is suitable on tick data type of VIX and UVXY. Since tick based data wasnt available for free on the web, The daily OHLC data was obtained from Investing.com and converted into tick data. Rather than considering daily close prices, using 4 ticks (OHLC) gives more movement in the price and hence more trading opportunities.
+Hence, using below assumptions, OHLC was converted into "4 ticks a day" data. Its important to derive where did the price move after OPEN every single day. Whether it went towards HIGH or LOW, before finishing the day at CLOSE.
+a. If CLOSE is higher than OPEN, price hit LOW before hitting HIGH for the day. Because CLOSE is more likely to be near HIGH for the day.
+b. If CLOSE is lower than OPEN, price hit HIGH before hitting LOW for the day. Becase CLOSE is more likely to be near LOW for the day
+
+
 ## Trading Strategy Rules
 The trading strategy follows these rules:
 1. **Initialization**:
