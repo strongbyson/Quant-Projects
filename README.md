@@ -17,10 +17,10 @@ The goal is to simulate trading decisions based on VIX thresholds, track the tot
 Implementing this strategy with "First trade amount" of 1% of Initial total capital in absolute terms will result in achieving 24.59% annualized return.
 
 ## Note - Data manipulation of VIX and UVXY in MS Excel using INDEX function.
-This trading strategy is suitable on tick data type of VIX and UVXY. Since tick based data wasnt available for free on the web, The daily OHLC data was obtained from Investing.com and converted into tick data. Rather than considering daily close prices, using 4 ticks (OHLC) gives more movement in the price and hence more trading opportunities.
-Hence, using below assumptions, OHLC was converted into "4 ticks a day" data. Its important to derive where did the price move after OPEN every single day. Whether it went towards HIGH or LOW, before finishing the day at CLOSE.
-a. If CLOSE is higher than OPEN, price hit LOW before hitting HIGH for the day. Because CLOSE is more likely to be near HIGH for the day.
-b. If CLOSE is lower than OPEN, price hit HIGH before hitting LOW for the day. Becase CLOSE is more likely to be near LOW for the day
+This trading strategy is suitable on tick data type of VIX and UVXY. Since tick based data wasnt available for free on the web, The daily OHLC data was obtained from Investing.com and converted into tick data. Rather than using daily CLOSE prices which would have given us considerably less trading opportunities, we used OHLC to create 4 ticks out of it, which gives us more movement in the price and hence more trading opportunities.
+Using below assumptions, OHLC was converted into "4 ticks a day" data. Its important to derive where did the price move after OPEN every single day. Whether it went towards HIGH or LOW, before finishing the day at CLOSE. This was decided with the help of below assumptions,
+a. If CLOSE is higher than OPEN, price hit LOW before hitting HIGH. Because CLOSE is more likely to be near HIGH for the day.
+b. If CLOSE is lower than OPEN, price hit HIGH before hitting LOW. Because CLOSE is more likely to be near LOW for the day.
 
 
 ## Trading Strategy Rules
